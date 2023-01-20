@@ -69,16 +69,6 @@ class WelcomeScreenFirst extends StatelessWidget {
                   label:
                       const Text("Next", style: TextStyle(color: Colors.white)),
                 )),
-            // ElevatedButton.icon(
-            //   icon: const Icon(Icons.arrow_right),
-            //   label: const Text("Skip", style: TextStyle(color: Colors.white)),
-            //   onPressed: () {},
-            //   style: ElevatedButton.styleFrom(
-            //     shape: RoundedRectangleBorder(
-            //       borderRadius: BorderRadius.circular(30),
-            //     ),
-            //   ),
-            // ),
           ],
         ),
       ),
@@ -221,7 +211,9 @@ class WelcomeScreenThird extends StatelessWidget {
                   Material(
                     color: Colors.blue,
                     child: InkWell(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.pushNamed(context, "/register");
+                      },
                       child: const SizedBox(
                         height: kToolbarHeight,
                         width: 390,
@@ -246,7 +238,8 @@ class WelcomeScreenThird extends StatelessWidget {
                               text: "Log In",
                               style: const TextStyle(color: Colors.yellow),
                               recognizer: TapGestureRecognizer()
-                                ..onTap = () => print('click')),
+                                ..onTap = () =>
+                                    Navigator.pushNamed(context, "/login")),
                         ]),
                   )
                 ],
