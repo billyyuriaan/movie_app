@@ -47,16 +47,28 @@ class WelcomeScreenFirst extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            FloatingActionButton.extended(
-                onPressed: () {},
-                label:
-                    const Text("Skip", style: TextStyle(color: Colors.white))),
-            FloatingActionButton.extended(
-                onPressed: () {
-                  Navigator.pushNamed(context, "/#second");
-                },
-                label:
-                    const Text("Next", style: TextStyle(color: Colors.white))),
+            SizedBox(
+                width: 67,
+                height: 40,
+                child: FloatingActionButton.extended(
+                  shape: const BeveledRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(2))),
+                  onPressed: () {},
+                  label:
+                      const Text("Skip", style: TextStyle(color: Colors.white)),
+                )),
+            SizedBox(
+                width: 67,
+                height: 40,
+                child: FloatingActionButton.extended(
+                  shape: const BeveledRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(2))),
+                  onPressed: () {
+                    Navigator.pushNamed(context, "/#second");
+                  },
+                  label:
+                      const Text("Next", style: TextStyle(color: Colors.white)),
+                )),
             // ElevatedButton.icon(
             //   icon: const Icon(Icons.arrow_right),
             //   label: const Text("Skip", style: TextStyle(color: Colors.white)),
@@ -120,26 +132,28 @@ class WelcomeScreenSecond extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            FloatingActionButton.extended(
-                onPressed: () {},
-                label:
-                    const Text("Skip", style: TextStyle(color: Colors.white))),
-            FloatingActionButton.extended(
-                onPressed: () {
-                  Navigator.pushNamed(context, "/#third");
-                },
-                label:
-                    const Text("Next", style: TextStyle(color: Colors.white))),
-            // ElevatedButton.icon(
-            //   icon: const Icon(Icons.arrow_right),
-            //   label: const Text("Skip", style: TextStyle(color: Colors.white)),
-            //   onPressed: () {},
-            //   style: ElevatedButton.styleFrom(
-            //     shape: RoundedRectangleBorder(
-            //       borderRadius: BorderRadius.circular(30),
-            //     ),
-            //   ),
-            // ),
+            SizedBox(
+                width: 67,
+                height: 40,
+                child: FloatingActionButton.extended(
+                  shape: const BeveledRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(2))),
+                  onPressed: () {},
+                  label:
+                      const Text("Skip", style: TextStyle(color: Colors.white)),
+                )),
+            SizedBox(
+                width: 67,
+                height: 40,
+                child: FloatingActionButton.extended(
+                  shape: const BeveledRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(2))),
+                  onPressed: () {
+                    Navigator.pushNamed(context, "/#third");
+                  },
+                  label:
+                      const Text("Next", style: TextStyle(color: Colors.white)),
+                )),
           ],
         ),
       ),
@@ -197,7 +211,7 @@ class WelcomeScreenThird extends StatelessWidget {
             ],
           )),
       floatingActionButton: Container(
-          padding: EdgeInsets.all(10),
+          padding: const EdgeInsets.all(10),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -210,7 +224,7 @@ class WelcomeScreenThird extends StatelessWidget {
                       onTap: () {},
                       child: const SizedBox(
                         height: kToolbarHeight,
-                        width: 500,
+                        width: 390,
                         child: Center(
                           child: Text("Get Started !",
                               style: TextStyle(
