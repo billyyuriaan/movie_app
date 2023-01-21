@@ -56,7 +56,9 @@ class WelcomeScreenFirst extends StatelessWidget {
                   backgroundColor: primaryB500color,
                   shape: const BeveledRectangleBorder(
                       borderRadius: BorderRadius.all(Radius.circular(2))),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, "/#third");
+                  },
                   label:
                       const Text("Skip", style: TextStyle(color: Colors.white)),
                 )),
@@ -134,7 +136,9 @@ class WelcomeScreenSecond extends StatelessWidget {
                   backgroundColor: primaryB500color,
                   shape: const BeveledRectangleBorder(
                       borderRadius: BorderRadius.all(Radius.circular(2))),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, "/#third");
+                  },
                   label:
                       const Text("Skip", style: TextStyle(color: Colors.white)),
                 )),

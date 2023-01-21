@@ -271,7 +271,9 @@ class _Login extends State<Login> {
                   width: 358,
                   height: 48,
                   child: TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushReplacementNamed(context, "/personilized");
+                    },
                     style:
                         TextButton.styleFrom(backgroundColor: primaryB500color),
                     child: const Text("Sign In",
@@ -298,7 +300,7 @@ class _Login extends State<Login> {
                         style: TextStyle(color: Colors.white)),
                     onPressed: () {},
                     style:
-                        TextButton.styleFrom(backgroundColor: primaryB500color),
+                        TextButton.styleFrom(backgroundColor: natural700Color),
                   ),
                 ),
               ),

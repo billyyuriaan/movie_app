@@ -9,6 +9,7 @@ const appBarText = LinearGradient(colors: [
   Color.fromRGBO(153, 19, 255, 1),
   Color.fromRGBO(211, 219, 255, 1)
 ]);
+const yellowSoft = Color.fromRGBO(233, 255, 101, 1);
 
 class GradientText extends StatelessWidget {
   const GradientText(
