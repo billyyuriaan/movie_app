@@ -33,9 +33,9 @@ class _Register extends State<Register> {
         ],
       ),
       backgroundColor: Colors.black,
-      body: Container(
-        padding: const EdgeInsets.all(20),
-        child: Expanded(
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(20),
           child: Column(
             // mainAxisAlignment: MainAxisAlignment.center,
             // ignore: prefer_const_literals_to_create_immutables
@@ -218,9 +218,9 @@ class _Login extends State<Login> {
         ],
       ),
       backgroundColor: Colors.black,
-      body: Container(
-        padding: const EdgeInsets.all(20),
-        child: Expanded(
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(20),
           child: Column(
             // mainAxisAlignment: MainAxisAlignment.center,
             // ignore: prefer_const_literals_to_create_immutables
