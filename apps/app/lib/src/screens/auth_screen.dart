@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
+import 'package:app/src/utils/colors.dart';
 
 class Register extends StatefulWidget {
   const Register({super.key});
@@ -22,8 +23,9 @@ class _Register extends State<Register> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Mooviey", style: TextStyle(color: Colors.white)),
-        backgroundColor: Colors.black,
+        title: const GradientText("Mooviey", gradient: appBarText),
+        backgroundColor: Colors.transparent,
+        elevation: 0.0,
         actions: [
           TextButton(
               onPressed: () {
@@ -32,7 +34,7 @@ class _Register extends State<Register> {
               child: const Text("Exit", style: TextStyle(color: Colors.white)))
         ],
       ),
-      backgroundColor: Colors.black,
+      backgroundColor: natural900Color,
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(20),
@@ -45,8 +47,7 @@ class _Register extends State<Register> {
               const SizedBox(height: 20),
               const Text(
                   "Add your account to explore all of the feature we provided!",
-                  style: TextStyle(
-                      color: Color.fromRGBO(177, 178, 178, 1), fontSize: 15)),
+                  style: TextStyle(color: natural400Color, fontSize: 15)),
               const SizedBox(
                 height: 40,
               ),
@@ -58,7 +59,7 @@ class _Register extends State<Register> {
                   decoration: InputDecoration(
                       filled: true,
                       focusColor: Colors.white,
-                      fillColor: Color.fromRGBO(87, 89, 90, 1),
+                      fillColor: natural700Color,
                       border: OutlineInputBorder(),
                       hintStyle:
                           TextStyle(color: Color.fromRGBO(177, 178, 178, 1)),
@@ -73,7 +74,7 @@ class _Register extends State<Register> {
                   decoration: InputDecoration(
                       filled: true,
                       focusColor: Colors.white,
-                      fillColor: Color.fromRGBO(87, 89, 90, 1),
+                      fillColor: natural700Color,
                       border: OutlineInputBorder(),
                       hintStyle:
                           TextStyle(color: Color.fromRGBO(177, 178, 178, 1)),
@@ -88,10 +89,9 @@ class _Register extends State<Register> {
                   decoration: InputDecoration(
                       filled: true,
                       focusColor: Colors.white,
-                      fillColor: Color.fromRGBO(87, 89, 90, 1),
+                      fillColor: natural700Color,
                       border: OutlineInputBorder(),
-                      hintStyle:
-                          TextStyle(color: Color.fromRGBO(177, 178, 178, 1)),
+                      hintStyle: TextStyle(color: natural400Color),
                       hintText: "Phone number"),
                 ),
               ),
@@ -103,7 +103,7 @@ class _Register extends State<Register> {
                   decoration: InputDecoration(
                       filled: true,
                       focusColor: Colors.white,
-                      fillColor: Color.fromRGBO(87, 89, 90, 1),
+                      fillColor: natural700Color,
                       border: OutlineInputBorder(),
                       hintStyle:
                           TextStyle(color: Color.fromRGBO(177, 178, 178, 1)),
@@ -117,7 +117,8 @@ class _Register extends State<Register> {
                   height: 48,
                   child: TextButton(
                     onPressed: () {},
-                    style: TextButton.styleFrom(backgroundColor: Colors.blue),
+                    style:
+                        TextButton.styleFrom(backgroundColor: primaryB500color),
                     child: const Text("Sign In",
                         style: TextStyle(color: Colors.white)),
                   ),
@@ -141,8 +142,8 @@ class _Register extends State<Register> {
                     label: const Text("Continue With Google",
                         style: TextStyle(color: Colors.white)),
                     onPressed: () {},
-                    style: TextButton.styleFrom(
-                        backgroundColor: Color.fromRGBO(87, 89, 90, 1)),
+                    style:
+                        TextButton.styleFrom(backgroundColor: natural700Color),
                   ),
                 ),
               ),
@@ -159,8 +160,8 @@ class _Register extends State<Register> {
                     label: const Text("Continue With Apple",
                         style: TextStyle(color: Colors.white)),
                     onPressed: () {},
-                    style: TextButton.styleFrom(
-                        backgroundColor: Color.fromRGBO(87, 89, 90, 1)),
+                    style:
+                        TextButton.styleFrom(backgroundColor: natural700Color),
                   ),
                 ),
               ),
@@ -207,8 +208,9 @@ class _Login extends State<Login> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Mooviey", style: TextStyle(color: Colors.white)),
-        backgroundColor: Colors.black,
+        title: const GradientText("Mooviey", gradient: appBarText),
+        backgroundColor: Colors.transparent,
+        elevation: 0.0,
         actions: [
           TextButton(
               onPressed: () {
@@ -217,7 +219,7 @@ class _Login extends State<Login> {
               child: const Text("Exit", style: TextStyle(color: Colors.white)))
         ],
       ),
-      backgroundColor: Colors.black,
+      backgroundColor: natural900Color,
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(20),
@@ -230,8 +232,7 @@ class _Login extends State<Login> {
               const SizedBox(height: 20),
               const Text(
                   "Log in your account to explore all of the feature we provided!",
-                  style: TextStyle(
-                      color: Color.fromRGBO(177, 178, 178, 1), fontSize: 15)),
+                  style: TextStyle(color: natural400Color, fontSize: 15)),
               const SizedBox(
                 height: 40,
               ),
@@ -243,10 +244,9 @@ class _Login extends State<Login> {
                   decoration: InputDecoration(
                       filled: true,
                       focusColor: Colors.white,
-                      fillColor: Color.fromRGBO(87, 89, 90, 1),
+                      fillColor: natural700Color,
                       border: OutlineInputBorder(),
-                      hintStyle:
-                          TextStyle(color: Color.fromRGBO(177, 178, 178, 1)),
+                      hintStyle: TextStyle(color: natural400Color),
                       hintText: "Enter your email / Phone number"),
                 ),
               ),
@@ -258,7 +258,7 @@ class _Login extends State<Login> {
                   decoration: InputDecoration(
                       filled: true,
                       focusColor: Colors.white,
-                      fillColor: Color.fromRGBO(87, 89, 90, 1),
+                      fillColor: natural700Color,
                       border: OutlineInputBorder(),
                       hintStyle:
                           TextStyle(color: Color.fromRGBO(177, 178, 178, 1)),
@@ -272,7 +272,8 @@ class _Login extends State<Login> {
                   height: 48,
                   child: TextButton(
                     onPressed: () {},
-                    style: TextButton.styleFrom(backgroundColor: Colors.blue),
+                    style:
+                        TextButton.styleFrom(backgroundColor: primaryB500color),
                     child: const Text("Sign In",
                         style: TextStyle(color: Colors.white)),
                   ),
@@ -296,8 +297,8 @@ class _Login extends State<Login> {
                     label: const Text("Continue With Google",
                         style: TextStyle(color: Colors.white)),
                     onPressed: () {},
-                    style: TextButton.styleFrom(
-                        backgroundColor: Color.fromRGBO(87, 89, 90, 1)),
+                    style:
+                        TextButton.styleFrom(backgroundColor: primaryB500color),
                   ),
                 ),
               ),
@@ -314,8 +315,8 @@ class _Login extends State<Login> {
                     label: const Text("Continue With Apple",
                         style: TextStyle(color: Colors.white)),
                     onPressed: () {},
-                    style: TextButton.styleFrom(
-                        backgroundColor: Color.fromRGBO(87, 89, 90, 1)),
+                    style:
+                        TextButton.styleFrom(backgroundColor: natural700Color),
                   ),
                 ),
               ),

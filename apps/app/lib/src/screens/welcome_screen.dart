@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:app/src/utils/colors.dart';
 
 class WelcomeScreenFirst extends StatelessWidget {
   const WelcomeScreenFirst({super.key});
@@ -9,10 +10,11 @@ class WelcomeScreenFirst extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Moovie", style: TextStyle(color: Colors.blue)),
-        backgroundColor: Colors.black,
+        title: const GradientText("Mooviey", gradient: appBarText),
+        backgroundColor: Colors.transparent,
+        elevation: 0.0,
       ),
-      backgroundColor: Colors.black,
+      backgroundColor: natural900Color,
       body: Container(
           padding: const EdgeInsets.all(10),
           child: Column(
@@ -51,6 +53,7 @@ class WelcomeScreenFirst extends StatelessWidget {
                 width: 67,
                 height: 40,
                 child: FloatingActionButton.extended(
+                  backgroundColor: primaryB500color,
                   shape: const BeveledRectangleBorder(
                       borderRadius: BorderRadius.all(Radius.circular(2))),
                   onPressed: () {},
@@ -61,6 +64,7 @@ class WelcomeScreenFirst extends StatelessWidget {
                 width: 67,
                 height: 40,
                 child: FloatingActionButton.extended(
+                  backgroundColor: primaryB500color,
                   shape: const BeveledRectangleBorder(
                       borderRadius: BorderRadius.all(Radius.circular(2))),
                   onPressed: () {
@@ -84,10 +88,11 @@ class WelcomeScreenSecond extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Moovie", style: TextStyle(color: Colors.blue)),
-        backgroundColor: Colors.black,
+        title: const GradientText("Mooviey", gradient: appBarText),
+        backgroundColor: Colors.transparent,
+        elevation: 0.0,
       ),
-      backgroundColor: Colors.black,
+      backgroundColor: natural900Color,
       body: Container(
           padding: const EdgeInsets.all(10),
           child: Column(
@@ -126,6 +131,7 @@ class WelcomeScreenSecond extends StatelessWidget {
                 width: 67,
                 height: 40,
                 child: FloatingActionButton.extended(
+                  backgroundColor: primaryB500color,
                   shape: const BeveledRectangleBorder(
                       borderRadius: BorderRadius.all(Radius.circular(2))),
                   onPressed: () {},
@@ -136,6 +142,7 @@ class WelcomeScreenSecond extends StatelessWidget {
                 width: 67,
                 height: 40,
                 child: FloatingActionButton.extended(
+                  backgroundColor: primaryB500color,
                   shape: const BeveledRectangleBorder(
                       borderRadius: BorderRadius.all(Radius.circular(2))),
                   onPressed: () {
@@ -157,17 +164,13 @@ class WelcomeScreenThird extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var login = InkWell(
-      onTap: () {},
-      child: const Text("Log In", style: TextStyle(color: Colors.yellow)),
-    );
-
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Moovie", style: TextStyle(color: Colors.blue)),
-        backgroundColor: Colors.black,
+        title: const GradientText("Mooviey", gradient: appBarText),
+        backgroundColor: Colors.transparent,
+        elevation: 0.0,
       ),
-      backgroundColor: Colors.black,
+      backgroundColor: natural900Color,
       body: Container(
           padding: const EdgeInsets.all(10),
           child: Column(
@@ -209,7 +212,7 @@ class WelcomeScreenThird extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   Material(
-                    color: Colors.blue,
+                    color: primaryB500color,
                     child: InkWell(
                       onTap: () {
                         Navigator.pushNamed(context, "/register");

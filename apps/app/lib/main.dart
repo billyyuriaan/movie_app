@@ -4,14 +4,12 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:window_size/window_size.dart';
 import 'package:app/src/App.dart';
+import 'package:app/src/utils/size.dart';
 
 void main() {
   // setupWindow();
   runApp(const App());
 }
-
-const double windowWidth = 390;
-const double windowHeight = 844;
 
 void setupWindow() {
   if (!kIsWeb &&
