@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:animations/animations.dart';
 import 'package:app/src/screens/welcome_screen.dart';
 import 'package:app/src/screens/auth_screen.dart';
+import 'package:app/src/screens/home_screen.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -27,7 +28,8 @@ class App extends StatelessWidget {
         "/#second": (context) => const WelcomeScreenSecond(),
         "/#third": (context) => const WelcomeScreenThird(),
         "/register": (context) => const Register(),
-        "/login": (context) => const Login()
+        "/login": (context) => const Login(),
+        "/home": (context) => const HomePage()
       },
     );
   }

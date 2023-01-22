@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
+import 'package:app/src/screens/home_screen.dart';
 import 'package:app/src/utils/colors.dart';
 
 class Register extends StatefulWidget {
@@ -116,10 +117,12 @@ class _Register extends State<Register> {
                   width: 358,
                   height: 48,
                   child: TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, "/login");
+                    },
                     style:
                         TextButton.styleFrom(backgroundColor: primaryB500color),
-                    child: const Text("Sign In",
+                    child: const Text("Sign Up",
                         style: TextStyle(color: Colors.white)),
                   ),
                 ),
@@ -272,7 +275,12 @@ class _Login extends State<Login> {
                   height: 48,
                   child: TextButton(
                     onPressed: () {
-                      Navigator.pushReplacementNamed(context, "/personilized");
+                      // Navigator.pushReplacementNamed(context, "/personilized");
+                      Navigator.pushAndRemoveUntil(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const HomePage()),
+                          (route) => false);
                     },
                     style:
                         TextButton.styleFrom(backgroundColor: primaryB500color),
