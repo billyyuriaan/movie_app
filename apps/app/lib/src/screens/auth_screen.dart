@@ -27,13 +27,6 @@ class _Register extends State<Register> {
         title: const GradientText("Mooviey", gradient: appBarText),
         backgroundColor: Colors.transparent,
         elevation: 0.0,
-        actions: [
-          TextButton(
-              onPressed: () {
-                Navigator.popAndPushNamed(context, "/#third");
-              },
-              child: const Text("Exit", style: TextStyle(color: Colors.white)))
-        ],
       ),
       backgroundColor: natural900Color,
       body: SingleChildScrollView(
@@ -118,7 +111,7 @@ class _Register extends State<Register> {
                   height: 48,
                   child: TextButton(
                     onPressed: () {
-                      Navigator.pushNamed(context, "/login");
+                      Navigator.popAndPushNamed(context, "/login");
                     },
                     style:
                         TextButton.styleFrom(backgroundColor: primaryB500color),
@@ -179,8 +172,8 @@ class _Register extends State<Register> {
                             text: "Log In",
                             style: const TextStyle(color: Colors.yellow),
                             recognizer: TapGestureRecognizer()
-                              ..onTap =
-                                  () => Navigator.pushNamed(context, "/login")),
+                              ..onTap = () =>
+                                  Navigator.popAndPushNamed(context, "/login")),
                       ]),
                 ),
               )
@@ -214,13 +207,6 @@ class _Login extends State<Login> {
         title: const GradientText("Mooviey", gradient: appBarText),
         backgroundColor: Colors.transparent,
         elevation: 0.0,
-        actions: [
-          TextButton(
-              onPressed: () {
-                Navigator.popAndPushNamed(context, "/#third");
-              },
-              child: const Text("Exit", style: TextStyle(color: Colors.white)))
-        ],
       ),
       backgroundColor: natural900Color,
       body: SingleChildScrollView(
@@ -276,11 +262,7 @@ class _Login extends State<Login> {
                   child: TextButton(
                     onPressed: () {
                       // Navigator.pushReplacementNamed(context, "/personilized");
-                      Navigator.pushAndRemoveUntil(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const HomePage()),
-                          (route) => false);
+                      Navigator.popAndPushNamed(context, "/personalized#first");
                     },
                     style:
                         TextButton.styleFrom(backgroundColor: primaryB500color),
@@ -341,8 +323,8 @@ class _Login extends State<Login> {
                             text: "Sign Up",
                             style: const TextStyle(color: Colors.yellow),
                             recognizer: TapGestureRecognizer()
-                              ..onTap = () =>
-                                  Navigator.pushNamed(context, "/register")),
+                              ..onTap = () => Navigator.popAndPushNamed(
+                                  context, "/register")),
                       ]),
                 ),
               )

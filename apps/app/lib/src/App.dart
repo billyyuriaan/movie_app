@@ -3,6 +3,7 @@ import 'package:animations/animations.dart';
 import 'package:app/src/screens/welcome_screen.dart';
 import 'package:app/src/screens/auth_screen.dart';
 import 'package:app/src/screens/home_screen.dart';
+import 'package:app/src/screens/personalized_screen.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -25,8 +26,10 @@ class App extends StatelessWidget {
       initialRoute: '/',
       routes: {
         "/": (context) => const WelcomeScreenFirst(),
-        "/#second": (context) => const WelcomeScreenSecond(),
-        "/#third": (context) => const WelcomeScreenThird(),
+        "/personalized#first": (context) => const PersonilizedFirstScreen(),
+        "/personalized#second": (context) => const PersonilizedSecondScreen(),
+        "/personalized#third": (context) => const PersonilizedThirdScreen(),
+        "/personalized#fourth": (context) => const PersonilizedFourthScreen(),
         "/register": (context) => const Register(),
         "/login": (context) => const Login(),
         "/home": (context) => const HomePage()

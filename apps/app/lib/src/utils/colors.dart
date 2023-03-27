@@ -5,9 +5,8 @@ const natural700Color = Color.fromRGBO(87, 89, 90, 1);
 const natural900Color = Color.fromRGBO(31, 34, 35, 1);
 const primaryB500color = Color.fromRGBO(101, 126, 255, 1);
 const appBarText = LinearGradient(colors: [
-  Color.fromRGBO(101, 128, 255, 1),
-  Color.fromRGBO(153, 19, 255, 1),
-  Color.fromRGBO(211, 219, 255, 1)
+  Color.fromRGBO(163, 238, 255, 1),
+  Color.fromRGBO(93, 213, 239, 1),
 ]);
 const yellowSoft = Color.fromRGBO(233, 255, 101, 1);
 
