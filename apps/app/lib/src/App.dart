@@ -12,18 +12,18 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "Mooviey",
-      theme: ThemeData(
-          // ignore: prefer_const_constructors
-          pageTransitionsTheme: PageTransitionsTheme(
-        // ignore: prefer_const_literals_to_create_immutables
-        builders: {
-          TargetPlatform.android: const SharedAxisPageTransitionsBuilder(
-              transitionType: SharedAxisTransitionType.horizontal),
-          TargetPlatform.iOS: const SharedAxisPageTransitionsBuilder(
-              transitionType: SharedAxisTransitionType.horizontal)
-        },
-      )),
-      initialRoute: '/',
+      // theme: ThemeData(
+      //     // ignore: prefer_const_constructors
+      //     pageTransitionsTheme: PageTransitionsTheme(
+      //   // ignore: prefer_const_literals_to_create_immutables
+      //   builders: {
+      //     TargetPlatform.android: const SharedAxisPageTransitionsBuilder(
+      //         transitionType: SharedAxisTransitionType.horizontal),
+      //     TargetPlatform.iOS: const SharedAxisPageTransitionsBuilder(
+      //         transitionType: SharedAxisTransitionType.horizontal)
+      //   },
+      // )),
+      initialRoute: '/personalized#first',
       routes: {
         "/": (context) => const WelcomeScreenFirst(),
         "/personalized#first": (context) => const PersonilizedFirstScreen(),

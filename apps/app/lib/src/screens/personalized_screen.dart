@@ -71,7 +71,24 @@ class PersonilizedFirstScreen extends StatelessWidget {
             ),
             const GuidenMark(
               indexMark: 0,
-            )
+            ),
+            const Divider(
+              color: Colors.transparent,
+            ),
+            const Center(
+                child: Text(
+              "Choose your favorite genres",
+              style: TextStyle(color: Colors.white, fontSize: 20),
+            )),
+            const Center(
+              child: Text(
+                "Selectng your favorite genres will help us to personilize your feeds",
+                style: TextStyle(color: natural700Color, fontSize: 12),
+              ),
+            ),
+            const Divider(
+              color: Colors.transparent,
+            ),
           ],
         ),
       )),
@@ -236,7 +253,7 @@ class PersonilizedFourthScreen extends StatelessWidget {
                 Navigator.pushNamedAndRemoveUntil(
                     context, "/home", (route) => false);
               },
-              child: const Text("Next"))
+              child: const Text("Done!"))
         ],
       ),
     );
