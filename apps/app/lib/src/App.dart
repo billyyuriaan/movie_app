@@ -23,7 +23,7 @@ class App extends StatelessWidget {
       //         transitionType: SharedAxisTransitionType.horizontal)
       //   },
       // )),
-      initialRoute: '/personalized#first',
+      initialRoute: "/personalized#first",
       routes: {
         "/": (context) => const WelcomeScreenFirst(),
         "/personalized#first": (context) => const PersonilizedFirstScreen(),
