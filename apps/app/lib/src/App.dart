@@ -1,9 +1,11 @@
+import 'package:app/src/screens/cinemaHome_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:animations/animations.dart';
 import 'package:app/src/screens/welcome_screen.dart';
 import 'package:app/src/screens/auth_screen.dart';
 import 'package:app/src/screens/home_screen.dart';
 import 'package:app/src/screens/personalized_screen.dart';
+import 'package:app/src/screens/session_screen.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -23,7 +25,7 @@ class App extends StatelessWidget {
       //         transitionType: SharedAxisTransitionType.horizontal)
       //   },
       // )),
-      initialRoute: "/personalized#first",
+      initialRoute: "/cinema",
       routes: {
         "/": (context) => const WelcomeScreenFirst(),
         "/personalized#first": (context) => const PersonilizedFirstScreen(),
@@ -32,7 +34,8 @@ class App extends StatelessWidget {
         "/personalized#fourth": (context) => const PersonilizedFourthScreen(),
         "/register": (context) => const Register(),
         "/login": (context) => const Login(),
-        "/home": (context) => const HomePage()
+        "/session": (context) => const SessionPage(),
+        "/cinema": (context) => const CinemaHome()
       },
     );
   }
