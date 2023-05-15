@@ -13,7 +13,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "Mooviey",
+      title: "Mooviez",
       // theme: ThemeData(
       //     // ignore: prefer_const_constructors
       //     pageTransitionsTheme: PageTransitionsTheme(
@@ -25,7 +25,7 @@ class App extends StatelessWidget {
       //         transitionType: SharedAxisTransitionType.horizontal)
       //   },
       // )),
-      initialRoute: "/cinema",
+      initialRoute: "/",
       routes: {
         "/": (context) => const WelcomeScreenFirst(),
         "/personalized#first": (context) => const PersonilizedFirstScreen(),
