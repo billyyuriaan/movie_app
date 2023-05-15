@@ -8,7 +8,7 @@
     "test": "test"
   },
   "scripts": {
-    "dev" : "flutter run"
+    "dev" : "flutter run -d linux"
   },
   "keywords": [],
   "author": "",
