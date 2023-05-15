@@ -20,14 +20,14 @@ class WelcomeScreenFirst extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset(
-              "assets/image/notfound.png",
+              "assets/image/welcome.png",
               width: 358,
               height: 303,
             ),
             // ignore: prefer_const_constructors
             Center(
               child: const Text(
-                "All in One",
+                "Epic and Best of the Best",
                 style: TextStyle(color: Colors.white, fontSize: 28),
               ),
             ),
@@ -37,8 +37,8 @@ class WelcomeScreenFirst extends StatelessWidget {
             // ignore: prefer_const_constructors
             Center(
               child: const Text(
-                "Watch and Stream the movie in one app",
-                style: TextStyle(color: natural700Color, fontSize: 18),
+                "Order the Latest Movie on Your Nearest Movie Theater",
+                style: TextStyle(color: natural400Color, fontSize: 18),
               ),
             ),
           ],
@@ -84,7 +84,7 @@ class WelcomeScreenSecond extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const GradientText("Mooviey", gradient: appBarText),
+        title: const GradientText("Mooviez", gradient: appBarText),
         backgroundColor: Colors.transparent,
         elevation: 0.0,
       ),
@@ -100,7 +100,7 @@ class WelcomeScreenSecond extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Image.asset(
-                    "assets/image/notfound.png",
+                    "assets/image/welcome.png",
                     width: 300,
                     height: 300,
                   ),
@@ -109,13 +109,13 @@ class WelcomeScreenSecond extends StatelessWidget {
               const SizedBox(
                 height: 40,
               ),
-              const Text("All in One",
+              const Text("Epic and Best of the Best",
                   style: TextStyle(color: Colors.white, fontSize: 40)),
               const SizedBox(
                 height: 10,
               ),
-              const Text("Watch and stream the movie in one app2",
-                  style: TextStyle(color: Colors.white, fontSize: 20)),
+              const Text("Order the Latest Movie on Your Nearest Movie Theater",
+                  style: TextStyle(color: natural400Color, fontSize: 20)),
             ],
           )),
       floatingActionButton: Container(
@@ -164,7 +164,7 @@ class WelcomeScreenThird extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const GradientText("Mooviey", gradient: appBarText),
+        title: const GradientText("Mooviez", gradient: appBarText),
         backgroundColor: Colors.transparent,
         elevation: 0.0,
       ),
@@ -180,7 +180,7 @@ class WelcomeScreenThird extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Image.asset(
-                    "assets/image/notfound.png",
+                    "assets/image/welcome.png",
                     width: 300,
                     height: 300,
                   ),
@@ -189,13 +189,13 @@ class WelcomeScreenThird extends StatelessWidget {
               const SizedBox(
                 height: 40,
               ),
-              const Text("All in One",
+              const Text("Epic and Best of the Best",
                   style: TextStyle(color: Colors.white, fontSize: 40)),
               const SizedBox(
                 height: 10,
               ),
-              const Text("Watch and stream the movie in one app",
-                  style: TextStyle(color: Colors.white, fontSize: 20)),
+              const Text("Order the Latest Movie on Your Nearest Movie Theater",
+                  style: TextStyle(color: natural400Color, fontSize: 20)),
               const SizedBox(
                 height: 40,
               ),

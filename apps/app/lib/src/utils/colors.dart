@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 const natural400Color = Color.fromRGBO(177, 178, 178, 1);
+const naturalWhiteColor = Color.fromRGBO(252, 252, 252, 1);
 const natural700Color = Color.fromRGBO(87, 89, 90, 1);
 const natural900Color = Color.fromRGBO(31, 34, 35, 1);
 const primaryB500color = Color.fromRGBO(101, 126, 255, 1);
