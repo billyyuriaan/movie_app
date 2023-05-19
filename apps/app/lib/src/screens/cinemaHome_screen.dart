@@ -30,10 +30,10 @@ class _CinemaHomeState extends State<CinemaHome> {
         ),
         elevation: 0.0,
       ),
-      backgroundColor: Colors.white,
+      backgroundColor: natural900Color,
       body: _widgetOpt[_selectedIdx],
       bottomNavigationBar: BottomNavigationBar(
-        items: [
+        items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
           BottomNavigationBarItem(icon: Icon(Icons.home_work), label: "Cinema"),
           BottomNavigationBarItem(icon: Icon(Icons.movie), label: "Ticket"),
@@ -42,6 +42,7 @@ class _CinemaHomeState extends State<CinemaHome> {
         onTap: _onItemTap,
         selectedItemColor: Colors.blue,
         unselectedItemColor: Colors.grey,
+        backgroundColor: natural700Color,
       ),
     );
   }
@@ -59,138 +60,139 @@ class _HomeCinemaScreenState extends State<HomeCinemaScreen> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-        child: Column(
-      children: [
-        Padding(
-          padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
-          child: Container(
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(5), color: Colors.black),
+        child: SingleChildScrollView(
+      child: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+            child: Container(
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(5), color: Colors.black),
+              child: Center(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    InkWell(
+                      onTap: () {},
+                      child: Row(children: const [
+                        Icon(
+                          Icons.swap_calls,
+                          color: Colors.white,
+                        ),
+                        Text(
+                          "data",
+                          style: TextStyle(color: Colors.white),
+                        )
+                      ]),
+                    ),
+                    InkWell(
+                      child: const Icon(Icons.notifications_none,
+                          color: Colors.white),
+                      onTap: () {},
+                    )
+                  ],
+                ),
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(30, 10, 30, 0),
             child: Center(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  InkWell(
-                    onTap: () {},
-                    child: Row(children: [
-                      const Icon(
-                        Icons.swap_calls,
-                        color: Colors.white,
-                      ),
-                      const Text(
-                        "data",
-                        style: TextStyle(color: Colors.white),
-                      )
-                    ]),
+                  Row(
+                    children: const [Icon(Icons.map_outlined), Text("Jakarta")],
                   ),
-                  InkWell(
-                    child: const Icon(Icons.notifications_none,
-                        color: Colors.white),
-                    onTap: () {},
-                  )
+                  IconButton(
+                      onPressed: () => {}, icon: const Icon(Icons.search))
                 ],
               ),
             ),
           ),
-        ),
-        Padding(
-          padding: const EdgeInsets.fromLTRB(30, 10, 30, 0),
-          child: Center(
+          Center(
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [Image.asset("assets/image/imgCorrusel.jpeg")],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(15.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                Row(
-                  children: [
-                    const Icon(Icons.map_outlined),
-                    const Text("Jakarta")
-                  ],
+                InkWell(
+                  onTap: () {},
+                  child: const Text(
+                    "See All >",
+                    style: TextStyle(
+                        color: Colors.blue,
+                        decoration: TextDecoration.underline),
+                  ),
                 ),
-                IconButton(onPressed: () => {}, icon: const Icon(Icons.search))
               ],
             ),
           ),
-        ),
-        Center(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [Image.asset("assets/image/box.jpeg")],
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.all(15.0),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              InkWell(
-                onTap: () {},
-                child: const Text(
-                  "See All >",
-                  style: TextStyle(
-                      color: Colors.blue, decoration: TextDecoration.underline),
+          Padding(
+            padding: const EdgeInsets.all(15.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                OutlinedButton(
+                  onPressed: () => {},
+                  style: OutlinedButton.styleFrom(
+                      backgroundColor: Colors.white,
+                      side: const BorderSide(color: Colors.blue, width: 2.0)),
+                  child: const Text(
+                    "All Cinema",
+                    style: TextStyle(color: Colors.blue),
+                  ),
                 ),
-              ),
-            ],
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.all(15.0),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              OutlinedButton(
-                onPressed: () => {},
-                style: OutlinedButton.styleFrom(
-                    backgroundColor: Colors.white,
-                    side: const BorderSide(color: Colors.blue, width: 2.0)),
-                child: const Text(
-                  "All Cinema",
-                  style: TextStyle(color: Colors.blue),
+                const SizedBox(
+                  width: 10,
                 ),
-              ),
-              const SizedBox(
-                width: 10,
-              ),
-              OutlinedButton(
-                onPressed: () => {},
-                style: OutlinedButton.styleFrom(
-                    backgroundColor: Colors.white,
-                    side: const BorderSide(color: Colors.black, width: 2.0)),
-                child: const Text(
-                  "XXI",
-                  style: TextStyle(color: Colors.grey),
+                OutlinedButton(
+                  onPressed: () => {},
+                  style: OutlinedButton.styleFrom(
+                      backgroundColor: Colors.white,
+                      side: const BorderSide(color: Colors.black, width: 2.0)),
+                  child: const Text(
+                    "XXI",
+                    style: TextStyle(color: Colors.grey),
+                  ),
                 ),
-              ),
-              const SizedBox(
-                width: 10,
-              ),
-              OutlinedButton(
-                onPressed: () => {},
-                style: OutlinedButton.styleFrom(
-                    backgroundColor: Colors.white,
-                    side: const BorderSide(color: Colors.black, width: 2.0)),
-                child: const Text(
-                  "CGV",
-                  style: TextStyle(color: Colors.grey),
+                const SizedBox(
+                  width: 10,
                 ),
-              ),
-              const SizedBox(
-                width: 10,
-              ),
-            ],
+                OutlinedButton(
+                  onPressed: () => {},
+                  style: OutlinedButton.styleFrom(
+                      backgroundColor: Colors.white,
+                      side: const BorderSide(color: Colors.black, width: 2.0)),
+                  child: const Text(
+                    "CGV",
+                    style: TextStyle(color: Colors.grey),
+                  ),
+                ),
+                const SizedBox(
+                  width: 10,
+                ),
+              ],
+            ),
           ),
-        ),
-        Padding(
-          padding: const EdgeInsets.all(15.0),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Image.asset("assets/image/card_batman.jpeg"),
-              Image.asset("assets/image/card_avatar.jpeg"),
-              Image.asset("assets/image/card_every.jpeg")
-            ],
-          ),
-        )
-      ],
+          Padding(
+            padding: const EdgeInsets.all(15.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Image.asset("assets/image/card_batman.jpeg"),
+                Image.asset("assets/image/card_avatar.jpeg"),
+                Image.asset("assets/image/card_every.jpeg")
+              ],
+            ),
+          )
+        ],
+      ),
     ));
   }
 }

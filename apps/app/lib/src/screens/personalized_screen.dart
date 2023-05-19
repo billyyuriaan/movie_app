@@ -401,7 +401,7 @@ class PersonilizedFourthScreen extends StatelessWidget {
           ElevatedButton(
               onPressed: () {
                 Navigator.pushNamedAndRemoveUntil(
-                    context, "/home", (route) => false);
+                    context, "/session", (route) => false);
               },
               child: const Text("Done!"))
         ],

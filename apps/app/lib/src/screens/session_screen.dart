@@ -53,7 +53,10 @@ class SessionPage extends StatelessWidget {
       floatingActionButton: TextButton(
         style: TextButton.styleFrom(
             backgroundColor: Colors.blue, fixedSize: const Size(100, 40)),
-        onPressed: () {},
+        onPressed: () {
+          Navigator.pushNamedAndRemoveUntil(
+              context, "/cinemaHome", (route) => false);
+        },
         child: const Text(
           "Next",
           style: TextStyle(color: Colors.white, fontSize: 24),

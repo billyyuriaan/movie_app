@@ -6,6 +6,7 @@ import 'package:app/src/screens/auth_screen.dart';
 import 'package:app/src/screens/home_screen.dart';
 import 'package:app/src/screens/personalized_screen.dart';
 import 'package:app/src/screens/session_screen.dart';
+import 'package:app/src/screens/cinemaSession_screen.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -25,7 +26,7 @@ class App extends StatelessWidget {
       //         transitionType: SharedAxisTransitionType.horizontal)
       //   },
       // )),
-      initialRoute: "/",
+      initialRoute: "/cinemaSession",
       routes: {
         "/": (context) => const WelcomeScreenFirst(),
         "/personalized#first": (context) => const PersonilizedFirstScreen(),
@@ -35,7 +36,8 @@ class App extends StatelessWidget {
         "/register": (context) => const Register(),
         "/login": (context) => const Login(),
         "/session": (context) => const SessionPage(),
-        "/cinema": (context) => const CinemaHome()
+        "/cinemaHome": (context) => const CinemaHome(),
+        "/cinemaSession": (context) => const CinemaSession(),
       },
     );
   }
