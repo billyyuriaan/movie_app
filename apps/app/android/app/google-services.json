@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "302661900941",
+    "project_id": "mooviez-49695",
+    "storage_bucket": "mooviez-49695.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:302661900941:android:f57c07a94071563b1e20c4",
+        "android_client_info": {
+          "package_name": "com.example.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "302661900941-9hr2s4q6oc7jr6qi2v1qujqpsr0r3rfm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZAqGoxjjWt5kuEdUoa_rK-IR97yCa9P0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "302661900941-9hr2s4q6oc7jr6qi2v1qujqpsr0r3rfm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

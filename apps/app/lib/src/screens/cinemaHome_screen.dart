@@ -63,38 +63,38 @@ class _HomeCinemaScreenState extends State<HomeCinemaScreen> {
         child: SingleChildScrollView(
       child: Column(
         children: [
-          Padding(
-            padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
-            child: Container(
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(5), color: Colors.black),
-              child: Center(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    InkWell(
-                      onTap: () {},
-                      child: Row(children: const [
-                        Icon(
-                          Icons.swap_calls,
-                          color: Colors.white,
-                        ),
-                        Text(
-                          "data",
-                          style: TextStyle(color: Colors.white),
-                        )
-                      ]),
-                    ),
-                    InkWell(
-                      child: const Icon(Icons.notifications_none,
-                          color: Colors.white),
-                      onTap: () {},
-                    )
-                  ],
-                ),
-              ),
-            ),
-          ),
+          // Padding(
+          //   padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+          //   child: Container(
+          //     decoration: BoxDecoration(
+          //         borderRadius: BorderRadius.circular(5), color: Colors.black),
+          //     child: Center(
+          //       child: Row(
+          //         mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          //         children: [
+          //           InkWell(
+          //             onTap: () {},
+          //             child: Row(children: const [
+          //               Icon(
+          //                 Icons.swap_calls,
+          //                 color: Colors.white,
+          //               ),
+          //               Text(
+          //                 "data",
+          //                 style: TextStyle(color: Colors.white),
+          //               )
+          //             ]),
+          //           ),
+          //           InkWell(
+          //             child: const Icon(Icons.notifications_none,
+          //                 color: Colors.white),
+          //             onTap: () {},
+          //           )
+          //         ],
+          //       ),
+          //     ),
+          //   ),
+          // ),
           Padding(
             padding: const EdgeInsets.fromLTRB(30, 10, 30, 0),
             child: Center(
