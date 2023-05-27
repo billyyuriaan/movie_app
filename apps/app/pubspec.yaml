@@ -74,6 +74,8 @@ flutter:
     - assets/image/card_every.jpeg
     - assets/image/Welcome.png
     - assets/image/imgCorrusel.jpeg
+    - assets/image/cinema_cgv.jpeg
+    - assets/image/cinema_xxi.jpeg
 
   # To add assets to your application, add an assets section, like this:
   # assets:
