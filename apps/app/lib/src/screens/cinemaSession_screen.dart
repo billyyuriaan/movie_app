@@ -122,7 +122,10 @@ class _CinemaSessionState extends State<CinemaSession> {
           ),
         )),
         floatingActionButton: FloatingActionButton.extended(
-            onPressed: () {}, label: const Text("Buy Ticket")));
+            onPressed: () {
+              Navigator.pushNamed(context, "/cinemaBooked");
+            },
+            label: const Text("Buy Ticket")));
   }
 }
 
