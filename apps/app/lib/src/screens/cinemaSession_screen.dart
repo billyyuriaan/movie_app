@@ -39,8 +39,8 @@ class _CinemaSessionState extends State<CinemaSession> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     // ignore: prefer_const_literals_to_create_immutables
                     children: [
-                        "AVATAR: THE WAY OF WATER",
                       const Text(
+                        "AVATAR: THE WAY OF WATER",
                         style: TextStyle(color: Colors.white),
                       ),
                       const Text(

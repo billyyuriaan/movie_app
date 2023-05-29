@@ -44,7 +44,6 @@ class _CinemaBookedState extends State<CinemaBooked> {
               const Text(
                 style: TextStyle(color: Colors.white),
                 "Transmart XXI | 2nd Floor, 2D",
-                style: TextStyle(color: Colors.white),
               ),
               const SizedBox(
                 height: 30,
