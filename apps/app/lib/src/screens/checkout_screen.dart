@@ -21,6 +21,7 @@ class Checkout extends StatelessWidget {
         child: Column(
           children: [
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Image.asset(
                   "assets/image/card_avatar.jpeg",
@@ -32,8 +33,6 @@ class Checkout extends StatelessWidget {
                   children: [
                     Image.asset(
                       "assets/image/xxi.png",
-                      height: 30,
-                      width: 76,
                     ),
                     const Text(
                       "AVATAR: THE WAY OF WATER",

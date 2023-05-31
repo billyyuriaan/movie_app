@@ -20,7 +20,7 @@ class WelcomeScreenFirst extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset(
-              "assets/image/welcome.png",
+              "assets/image/Welcome.png",
               width: 358,
               height: 303,
             ),

@@ -24,18 +24,16 @@ class SessionPage extends StatelessWidget {
             children: [
               Image.asset(
                 "assets/image/showtime.jpeg",
-                width: 163,
-                height: 141,
               ),
               const SizedBox(
-                height: 24,
+                height: 44,
               ),
               const Text(
                 "Watch Cinema",
                 style: TextStyle(color: natural400Color, fontSize: 18),
               ),
               const SizedBox(
-                height: 10,
+                height: 24,
               ),
               const SizedBox(
                 width: 163,

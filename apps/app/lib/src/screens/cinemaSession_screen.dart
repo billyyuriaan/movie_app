@@ -196,6 +196,23 @@ class _ScheduleMovieState extends State<ScheduleMovie> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
+                const Text(
+                  "Cinema",
+                  style: TextStyle(color: Colors.white),
+                ),
+                const Text(
+                  "Playing at",
+                  style: TextStyle(color: Colors.white),
+                ),
+                const Text(
+                  "Pricing",
+                  style: TextStyle(color: Colors.white),
+                ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
                 Image.asset("assets/image/cinema_xxi.jpeg"),
                 Column(
                   children: [

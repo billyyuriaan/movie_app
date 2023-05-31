@@ -8,6 +8,7 @@ import 'package:app/src/screens/personalized_screen.dart';
 import 'package:app/src/screens/session_screen.dart';
 import 'package:app/src/screens/cinemaSession_screen.dart';
 import 'package:app/src/screens/cinemaBooked_screen.dart';
+import 'package:app/src/screens/checkout_screen.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -27,19 +28,20 @@ class App extends StatelessWidget {
       //         transitionType: SharedAxisTransitionType.horizontal)
       //   },
       // )),
-      initialRoute: "/cinemaSession",
+      initialRoute: "/",
       routes: {
         "/": (context) => const WelcomeScreenFirst(),
-        "/personalized#first": (context) => const PersonilizedFirstScreen(),
-        "/personalized#second": (context) => const PersonilizedSecondScreen(),
-        "/personalized#third": (context) => const PersonilizedThirdScreen(),
-        "/personalized#fourth": (context) => const PersonilizedFourthScreen(),
+        // "/personalized#first": (context) => const PersonilizedFirstScreen(),
+        // "/personalized#second": (context) => const PersonilizedSecondScreen(),
+        // "/personalized#third": (context) => const PersonilizedThirdScreen(),
+        // "/personalized#fourth": (context) => const PersonilizedFourthScreen(),
         "/register": (context) => const Register(),
         "/login": (context) => const Login(),
         "/session": (context) => const SessionPage(),
         "/cinemaHome": (context) => const CinemaHome(),
         "/cinemaSession": (context) => const CinemaSession(),
-        "/cinemaBooked": (context) => const CinemaBooked()
+        "/cinemaBooked": (context) => const CinemaBooked(),
+        "/checkout": (context) => const Checkout()
       },
     );
   }

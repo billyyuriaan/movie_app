@@ -262,7 +262,7 @@ class _Login extends State<Login> {
                   child: TextButton(
                     onPressed: () {
                       // Navigator.pushReplacementNamed(context, "/personilized");
-                      Navigator.popAndPushNamed(context, "/personalized#first");
+                      Navigator.popAndPushNamed(context, "/session");
                     },
                     style:
                         TextButton.styleFrom(backgroundColor: primaryB500color),

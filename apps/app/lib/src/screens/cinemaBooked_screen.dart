@@ -408,6 +408,8 @@ class _CinemaBookedState extends State<CinemaBooked> {
                       TextButton(
                           onPressed: () {
                             Navigator.of(context).pop();
+                            Navigator.pushNamedAndRemoveUntil(
+                                context, "/checkout", (route) => false);
                           },
                           child: const Text("Buy"))
                     ],

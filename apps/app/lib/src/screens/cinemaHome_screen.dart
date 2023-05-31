@@ -181,16 +181,21 @@ class _HomeCinemaScreenState extends State<HomeCinemaScreen> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.all(15.0),
+            padding: const EdgeInsets.all(5.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Image.asset("assets/image/card_batman.jpeg"),
-                Image.asset("assets/image/card_avatar.jpeg"),
+                InkWell(
+                  child: Image.asset("assets/image/card_avatar.jpeg"),
+                  onTap: () {
+                    Navigator.popAndPushNamed(context, "/cinemaSession");
+                  },
+                ),
                 Image.asset("assets/image/card_every.jpeg")
               ],
             ),
-          )
+          ),
         ],
       ),
     ));
