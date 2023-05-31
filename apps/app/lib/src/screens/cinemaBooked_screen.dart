@@ -40,11 +40,10 @@ class _CinemaBookedState extends State<CinemaBooked> {
               ),
               const Text(
                 "Senin | 16 Jan 2023",
-                style: TextStyle(color: Colors.white),
               ),
               const Text(
-                "Transmart XXI | 2nd Floor, 2D",
                 style: TextStyle(color: Colors.white),
+                "Transmart XXI | 2nd Floor, 2D",
               ),
               const SizedBox(
                 height: 30,
