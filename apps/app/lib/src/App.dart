@@ -9,6 +9,7 @@ import 'package:app/src/screens/session_screen.dart';
 import 'package:app/src/screens/cinemaSession_screen.dart';
 import 'package:app/src/screens/cinemaBooked_screen.dart';
 import 'package:app/src/screens/checkout_screen.dart';
+import 'package:app/src/screens/tickets_screen.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -41,7 +42,8 @@ class App extends StatelessWidget {
         "/cinemaHome": (context) => const CinemaHome(),
         "/cinemaSession": (context) => const CinemaSession(),
         "/cinemaBooked": (context) => const CinemaBooked(),
-        "/checkout": (context) => const Checkout()
+        "/checkout": (context) => const Checkout(),
+        "/ticket": (context) => const TicketScreen()
       },
     );
   }

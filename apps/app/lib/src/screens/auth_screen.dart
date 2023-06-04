@@ -1,7 +1,11 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
 import 'package:app/src/screens/home_screen.dart';
 import 'package:app/src/utils/colors.dart';
+import 'package:app/firebase_options.dart';
+import 'package:app/src/firebase/firebase_db.dart';
 
 class Register extends StatefulWidget {
   const Register({super.key});
@@ -15,9 +19,29 @@ class Register extends StatefulWidget {
 class _Register extends State<Register> {
   bool obscured = false;
 
+  final TextEditingController _controllerName = TextEditingController();
+  final TextEditingController _controllerEmail = TextEditingController();
+  final TextEditingController _controllerPhoneNumber = TextEditingController();
+  final TextEditingController _controllerPassword = TextEditingController();
+
+  Future<void> firebaseInit() async {
+    await Firebase.initializeApp(
+        options: DefaultFirebaseOptions.currentPlatform);
+  }
+
   @override
   void initState() {
+    firebaseInit();
     super.initState();
+
+    _controllerName.addListener(() {
+      final String text = _controllerName.text.toLowerCase();
+      _controllerName.value = _controllerName.value.copyWith(
+          text: text,
+          selection:
+              TextSelection(baseOffset: text.length, extentOffset: text.length),
+          composing: TextRange.empty);
+    });
   }
 
   @override
@@ -45,12 +69,13 @@ class _Register extends State<Register> {
               const SizedBox(
                 height: 40,
               ),
-              const Padding(
-                padding: EdgeInsets.all(5),
+              Padding(
+                padding: const EdgeInsets.all(5),
                 child: TextField(
+                  controller: _controllerName,
                   obscureText: false,
-                  style: TextStyle(color: Colors.white),
-                  decoration: InputDecoration(
+                  style: const TextStyle(color: Colors.white),
+                  decoration: const InputDecoration(
                       filled: true,
                       focusColor: Colors.white,
                       fillColor: natural700Color,
@@ -60,9 +85,10 @@ class _Register extends State<Register> {
                       hintText: "Name"),
                 ),
               ),
-              const Padding(
+              Padding(
                 padding: EdgeInsets.all(5),
                 child: TextField(
+                  controller: _controllerEmail,
                   obscureText: false,
                   style: TextStyle(color: Colors.white),
                   decoration: InputDecoration(
@@ -75,9 +101,10 @@ class _Register extends State<Register> {
                       hintText: "Name@yourmail.com"),
                 ),
               ),
-              const Padding(
+              Padding(
                 padding: EdgeInsets.all(5),
                 child: TextField(
+                  controller: _controllerPhoneNumber,
                   obscureText: false,
                   style: TextStyle(color: Colors.white),
                   decoration: InputDecoration(
@@ -89,9 +116,10 @@ class _Register extends State<Register> {
                       hintText: "Phone number"),
                 ),
               ),
-              const Padding(
+              Padding(
                 padding: EdgeInsets.all(5),
                 child: TextField(
+                  controller: _controllerPassword,
                   obscureText: true,
                   style: TextStyle(color: Colors.white),
                   decoration: InputDecoration(
@@ -111,7 +139,28 @@ class _Register extends State<Register> {
                   height: 48,
                   child: TextButton(
                     onPressed: () {
-                      Navigator.popAndPushNamed(context, "/login");
+                      final dataInput = <String, dynamic>{
+                        "username": _controllerName.text,
+                        "email": _controllerEmail.text,
+                        "phoneNumber": _controllerPhoneNumber.text,
+                        "password": _controllerPassword.text,
+                        "created_at": Timestamp.fromDate(DateTime.now())
+                      };
+
+                      db.collection("users").add(dataInput).then((value) {
+                        AlertDialog(
+                          title: const Text("Success"),
+                          content: const Text("Success On Register Account"),
+                          actions: [
+                            TextButton(
+                                onPressed: () {
+                                  Navigator.of(context).pop();
+                                  Navigator.popAndPushNamed(context, "/login");
+                                },
+                                child: const Text("Ok")),
+                          ],
+                        );
+                      });
                     },
                     style:
                         TextButton.styleFrom(backgroundColor: primaryB500color),

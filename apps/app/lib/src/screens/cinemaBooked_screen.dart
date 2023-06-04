@@ -392,29 +392,8 @@ class _CinemaBookedState extends State<CinemaBooked> {
         )),
         floatingActionButton: FloatingActionButton.extended(
           onPressed: () {
-            showDialog<void>(
-                context: context,
-                builder: (context) {
-                  return AlertDialog(
-                    title: const Text("Confirmation"),
-                    content: const Text(
-                        "Apakah Anda Yakin Untuk Memesan Tiket Ini?"),
-                    actions: [
-                      TextButton(
-                          onPressed: () {
-                            Navigator.of(context).pop();
-                          },
-                          child: const Text("Cancle")),
-                      TextButton(
-                          onPressed: () {
-                            Navigator.of(context).pop();
-                            Navigator.pushNamedAndRemoveUntil(
-                                context, "/checkout", (route) => false);
-                          },
-                          child: const Text("Buy"))
-                    ],
-                  );
-                });
+            Navigator.pushNamedAndRemoveUntil(
+                context, "/checkout", (route) => false);
           },
           label: const Text("Buy Ticket"),
         ));

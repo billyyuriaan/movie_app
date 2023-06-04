@@ -63,7 +63,29 @@ class Checkout extends StatelessWidget {
             backgroundColor: Colors.blue,
             minimumSize: const Size(200, 40)),
         onPressed: () {
-          Navigator.pushNamedAndRemoveUntil(context, "/", (route) => false);
+          showDialog<void>(
+              context: context,
+              builder: (context) {
+                return AlertDialog(
+                  title: const Text("Confirmation"),
+                  content:
+                      const Text("Apakah Anda Yakin Untuk Memesan Tiket Ini?"),
+                  actions: [
+                    TextButton(
+                        onPressed: () {
+                          Navigator.of(context).pop();
+                        },
+                        child: const Text("Cancle")),
+                    TextButton(
+                        onPressed: () {
+                          Navigator.of(context).pop();
+                          Navigator.pushNamedAndRemoveUntil(
+                              context, "/ticket", (route) => false);
+                        },
+                        child: const Text("Buy"))
+                  ],
+                );
+              });
         },
         child: const Text(
           "PROCEED CHECKOUT",
