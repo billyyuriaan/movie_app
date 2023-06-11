@@ -11,7 +11,10 @@ class CinemaHome extends StatefulWidget {
 class _CinemaHomeState extends State<CinemaHome> {
   int _selectedIdx = 0;
 
-  static const List<Widget> _widgetOpt = <Widget>[HomeCinemaScreen()];
+  static const List<Widget> _widgetOpt = <Widget>[
+    HomeCinemaScreen(),
+    HomeCinemaProfileScreen()
+  ];
 
   void _onItemTap(int index) {
     setState(() {
@@ -43,6 +46,68 @@ class _CinemaHomeState extends State<CinemaHome> {
         backgroundColor: natural700Color,
       ),
     );
+  }
+}
+
+class HomeCinemaProfileScreen extends StatefulWidget {
+  const HomeCinemaProfileScreen({super.key});
+
+  @override
+  State<HomeCinemaProfileScreen> createState() =>
+      _HomeCinemaProfileScreenState();
+}
+
+class _HomeCinemaProfileScreenState extends State<HomeCinemaProfileScreen> {
+  @override
+  Widget build(BuildContext context) {
+    return SafeArea(
+        child: Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Center(
+            child: CircleAvatar(
+          backgroundColor: Colors.blue,
+          radius: 40,
+          child: Image.asset(
+            "assets/image/default_user.png",
+          ),
+        )),
+        const SizedBox(
+          height: 30,
+        ),
+        const Center(
+          child: Text(
+            "User",
+            style: TextStyle(color: Colors.white),
+          ),
+        ),
+        const SizedBox(
+          height: 40,
+        ),
+        TextButton.icon(
+            onPressed: () {
+              showDialog<String>(
+                  context: context,
+                  builder: (BuildContext context) {
+                    return AlertDialog(
+                      title: const Text("About"),
+                      content: const Text(
+                          "Moviez Merupakan Aplikasi Pemesanan Tiket Bioskop"),
+                      actions: [
+                        TextButton(
+                            onPressed: () {
+                              Navigator.pop(context);
+                              Navigator.popAndPushNamed(context, "/login");
+                            },
+                            child: const Text("OK"))
+                      ],
+                    );
+                  });
+            },
+            icon: const Icon(Icons.info),
+            label: const Text("About"))
+      ],
+    ));
   }
 }
 

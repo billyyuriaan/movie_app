@@ -148,18 +148,23 @@ class _Register extends State<Register> {
                       };
 
                       db.collection("users").add(dataInput).then((value) {});
-                      AlertDialog(
-                        title: const Text("Success"),
-                        content: const Text("Success On Register Account"),
-                        actions: [
-                          TextButton(
-                              onPressed: () {
-                                Navigator.of(context).pop();
-                                Navigator.popAndPushNamed(context, "/login");
-                              },
-                              child: const Text("Ok")),
-                        ],
-                      );
+                      showDialog<String>(
+                          context: context,
+                          builder: (BuildContext context) {
+                            return AlertDialog(
+                              title: const Text("Success on Create Account"),
+                              content: const Text("Silahkan Log In"),
+                              actions: [
+                                TextButton(
+                                    onPressed: () {
+                                      Navigator.pop(context);
+                                      Navigator.popAndPushNamed(
+                                          context, "/login");
+                                    },
+                                    child: const Text("OK"))
+                              ],
+                            );
+                          });
                     },
                     style:
                         TextButton.styleFrom(backgroundColor: primaryB500color),

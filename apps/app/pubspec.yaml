@@ -78,6 +78,7 @@ flutter:
     - assets/image/cinema_cgv.jpeg
     - assets/image/cinema_xxi.jpeg
     - assets/image/xxi.png
+    - assets/image/default_user.png
 
   # To add assets to your application, add an assets section, like this:
   # assets:
