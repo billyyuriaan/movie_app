@@ -147,20 +147,19 @@ class _Register extends State<Register> {
                         "created_at": Timestamp.fromDate(DateTime.now())
                       };
 
-                      db.collection("users").add(dataInput).then((value) {
-                        AlertDialog(
-                          title: const Text("Success"),
-                          content: const Text("Success On Register Account"),
-                          actions: [
-                            TextButton(
-                                onPressed: () {
-                                  Navigator.of(context).pop();
-                                  Navigator.popAndPushNamed(context, "/login");
-                                },
-                                child: const Text("Ok")),
-                          ],
-                        );
-                      });
+                      db.collection("users").add(dataInput).then((value) {});
+                      AlertDialog(
+                        title: const Text("Success"),
+                        content: const Text("Success On Register Account"),
+                        actions: [
+                          TextButton(
+                              onPressed: () {
+                                Navigator.of(context).pop();
+                                Navigator.popAndPushNamed(context, "/login");
+                              },
+                              child: const Text("Ok")),
+                        ],
+                      );
                     },
                     style:
                         TextButton.styleFrom(backgroundColor: primaryB500color),

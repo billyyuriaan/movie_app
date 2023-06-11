@@ -1,11 +1,31 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:app/src/utils/colors.dart';
+import 'package:app/firebase_options.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:app/src/firebase/firebase_db.dart';
 
-class Checkout extends StatelessWidget {
+class Checkout extends StatefulWidget {
   const Checkout({super.key});
 
   @override
+  State<Checkout> createState() => _CheckoutState();
+}
+
+class _CheckoutState extends State<Checkout> {
+  @override
   Widget build(BuildContext context) {
+    Future<void> firebaseInit() async {
+      await Firebase.initializeApp(
+          options: DefaultFirebaseOptions.currentPlatform);
+    }
+
+    @override
+    void initState() {
+      firebaseInit();
+      super.initState();
+    }
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.transparent,
@@ -78,6 +98,13 @@ class Checkout extends StatelessWidget {
                         child: const Text("Cancle")),
                     TextButton(
                         onPressed: () {
+                          final dataSent = <String, dynamic>{
+                            "title": "Avatar: The Way Of Water",
+                            "watch": Timestamp.fromDate(DateTime(2023)),
+                            "created_at": Timestamp.fromDate(DateTime.now())
+                          };
+
+                          db.collection("order").add(dataSent).then((value) {});
                           Navigator.of(context).pop();
                           Navigator.pushNamedAndRemoveUntil(
                               context, "/ticket", (route) => false);

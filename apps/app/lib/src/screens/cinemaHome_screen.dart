@@ -35,8 +35,6 @@ class _CinemaHomeState extends State<CinemaHome> {
       bottomNavigationBar: BottomNavigationBar(
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-          BottomNavigationBarItem(icon: Icon(Icons.home_work), label: "Cinema"),
-          BottomNavigationBarItem(icon: Icon(Icons.movie), label: "Ticket"),
           BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile"),
         ],
         onTap: _onItemTap,
