@@ -1,9 +1,9 @@
 #!/bin/sh
 # This is a generated file; do not edit or check into version control.
-export "FLUTTER_ROOT=T:\flutter_windows_3.7.5-stable\flutter"
-export "FLUTTER_APPLICATION_PATH=G:\Android\movie_app\apps\app"
+export "FLUTTER_ROOT=/home/iolux/snap/flutter/common/flutter"
+export "FLUTTER_APPLICATION_PATH=/home/iolux/Documents/projcet/movie_app/apps/app"
 export "COCOAPODS_PARALLEL_CODE_SIGN=true"
-export "FLUTTER_TARGET=lib\main.dart"
+export "FLUTTER_TARGET=lib/main.dart"
 export "FLUTTER_BUILD_DIR=build"
 export "FLUTTER_BUILD_NAME=1.0.0"
 export "FLUTTER_BUILD_NUMBER=1"

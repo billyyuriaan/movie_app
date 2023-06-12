@@ -2,10 +2,10 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
-import 'package:app/src/screens/home_screen.dart';
 import 'package:app/src/utils/colors.dart';
 import 'package:app/firebase_options.dart';
 import 'package:app/src/firebase/firebase_db.dart';
+import 'package:app/src/sqflite/sqflite.dart';
 
 class Register extends StatefulWidget {
   const Register({super.key});
@@ -23,6 +23,7 @@ class _Register extends State<Register> {
   final TextEditingController _controllerEmail = TextEditingController();
   final TextEditingController _controllerPhoneNumber = TextEditingController();
   final TextEditingController _controllerPassword = TextEditingController();
+  final DatabaseSQL _sql = DatabaseSQL();
 
   Future<void> firebaseInit() async {
     await Firebase.initializeApp(
@@ -139,6 +140,9 @@ class _Register extends State<Register> {
                   height: 48,
                   child: TextButton(
                     onPressed: () {
+                      // _sql.rawSql(
+                      //     "INSERT INTO user (name, email, phoneNumber, password) VALUES (${_controllerName.text}, ${_controllerEmail.text}, ${_controllerPhoneNumber.text}, ${_controllerPassword.text})");
+
                       final dataInput = <String, dynamic>{
                         "username": _controllerName.text,
                         "email": _controllerEmail.text,
