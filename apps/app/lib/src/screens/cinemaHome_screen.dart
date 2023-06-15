@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:app/src/utils/colors.dart';
+import 'package:geolocator/geolocator.dart';
 
 class CinemaHome extends StatefulWidget {
   const CinemaHome({super.key});
@@ -58,6 +59,48 @@ class HomeCinemaProfileScreen extends StatefulWidget {
 }
 
 class _HomeCinemaProfileScreenState extends State<HomeCinemaProfileScreen> {
+  final GeolocatorPlatform _geolocatorPlatform = GeolocatorPlatform.instance;
+  late Position position;
+
+  Future<Position?> _getCurrentPosisition() async {
+    final hasPermission = await _handlePermisson();
+    Position? positition;
+
+    if (!hasPermission) {
+      return positition;
+    }
+
+    positition = await _geolocatorPlatform.getCurrentPosition();
+    return positition;
+  }
+
+  Future<bool> _handlePermisson() async {
+    bool serviceEnable;
+    LocationPermission permission;
+
+    serviceEnable = await _geolocatorPlatform.isLocationServiceEnabled();
+    if (!serviceEnable) {
+      return false;
+    }
+
+    permission = await _geolocatorPlatform.checkPermission();
+    if (permission == LocationPermission.denied) {
+      return false;
+    }
+
+    if (permission == LocationPermission.deniedForever) {
+      return false;
+    }
+
+    return true;
+  }
+
+  @override
+  void initState() {
+    position = _getCurrentPosisition() as Position;
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(

@@ -45,6 +45,8 @@ dependencies:
   firebase_core: ^2.13.0
   cloud_firestore: ^4.8.0
   sqflite: ^2.2.8+4
+  geolocator: ^9.0.2
+  youtube_player_flutter: ^8.1.2
 
 dev_dependencies:
   flutter_test:
