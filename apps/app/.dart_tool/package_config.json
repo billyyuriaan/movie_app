@@ -15,7 +15,7 @@
     },
     {
       "name": "async",
-      "rootUri": "file:///home/iolux/.pub-cache/hosted/pub.dev/async-2.11.0",
+      "rootUri": "file:///home/iolux/.pub-cache/hosted/pub.dev/async-2.10.0",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
@@ -27,7 +27,7 @@
     },
     {
       "name": "characters",
-      "rootUri": "file:///home/iolux/.pub-cache/hosted/pub.dev/characters-1.3.0",
+      "rootUri": "file:///home/iolux/.pub-cache/hosted/pub.dev/characters-1.2.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -57,9 +57,9 @@
     },
     {
       "name": "collection",
-      "rootUri": "file:///home/iolux/.pub-cache/hosted/pub.dev/collection-1.17.1",
+      "rootUri": "file:///home/iolux/.pub-cache/hosted/pub.dev/collection-1.17.0",
       "packageUri": "lib/",
-      "languageVersion": "2.18"
+      "languageVersion": "2.12"
     },
     {
       "name": "crypto",
@@ -101,7 +101,7 @@
       "name": "flutter",
       "rootUri": "file:///home/iolux/snap/flutter/common/flutter/packages/flutter",
       "packageUri": "lib/",
-      "languageVersion": "3.0"
+      "languageVersion": "2.17"
     },
     {
       "name": "flutter_inappwebview",
@@ -119,13 +119,13 @@
       "name": "flutter_test",
       "rootUri": "file:///home/iolux/snap/flutter/common/flutter/packages/flutter_test",
       "packageUri": "lib/",
-      "languageVersion": "3.0"
+      "languageVersion": "2.17"
     },
     {
       "name": "flutter_web_plugins",
       "rootUri": "file:///home/iolux/snap/flutter/common/flutter/packages/flutter_web_plugins",
       "packageUri": "lib/",
-      "languageVersion": "3.0"
+      "languageVersion": "2.17"
     },
     {
       "name": "geolocator",
@@ -165,9 +165,9 @@
     },
     {
       "name": "js",
-      "rootUri": "file:///home/iolux/.pub-cache/hosted/pub.dev/js-0.6.7",
+      "rootUri": "file:///home/iolux/.pub-cache/hosted/pub.dev/js-0.6.5",
       "packageUri": "lib/",
-      "languageVersion": "2.19"
+      "languageVersion": "2.16"
     },
     {
       "name": "lints",
@@ -177,7 +177,7 @@
     },
     {
       "name": "matcher",
-      "rootUri": "file:///home/iolux/.pub-cache/hosted/pub.dev/matcher-0.12.15",
+      "rootUri": "file:///home/iolux/.pub-cache/hosted/pub.dev/matcher-0.12.13",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
@@ -189,7 +189,7 @@
     },
     {
       "name": "meta",
-      "rootUri": "file:///home/iolux/.pub-cache/hosted/pub.dev/meta-1.9.1",
+      "rootUri": "file:///home/iolux/.pub-cache/hosted/pub.dev/meta-1.8.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -201,7 +201,7 @@
     },
     {
       "name": "path",
-      "rootUri": "file:///home/iolux/.pub-cache/hosted/pub.dev/path-1.8.3",
+      "rootUri": "file:///home/iolux/.pub-cache/hosted/pub.dev/path-1.8.2",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -221,7 +221,7 @@
       "name": "sky_engine",
       "rootUri": "file:///home/iolux/snap/flutter/common/flutter/bin/cache/pkg/sky_engine",
       "packageUri": "lib/",
-      "languageVersion": "3.0"
+      "languageVersion": "2.12"
     },
     {
       "name": "source_span",
@@ -273,7 +273,7 @@
     },
     {
       "name": "test_api",
-      "rootUri": "file:///home/iolux/.pub-cache/hosted/pub.dev/test_api-0.5.1",
+      "rootUri": "file:///home/iolux/.pub-cache/hosted/pub.dev/test_api-0.4.16",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
@@ -314,7 +314,7 @@
       "languageVersion": "2.18"
     }
   ],
-  "generated": "2023-06-15T08:55:15.445350Z",
+  "generated": "2023-06-15T17:10:48.332777Z",
   "generator": "pub",
-  "generatorVersion": "3.0.3"
+  "generatorVersion": "2.19.5"
 }

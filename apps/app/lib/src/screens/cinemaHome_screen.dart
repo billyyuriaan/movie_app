@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:app/src/utils/colors.dart';
 import 'package:geolocator/geolocator.dart';
+import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 class CinemaHome extends StatefulWidget {
   const CinemaHome({super.key});
@@ -59,48 +60,6 @@ class HomeCinemaProfileScreen extends StatefulWidget {
 }
 
 class _HomeCinemaProfileScreenState extends State<HomeCinemaProfileScreen> {
-  final GeolocatorPlatform _geolocatorPlatform = GeolocatorPlatform.instance;
-  late Position position;
-
-  Future<Position?> _getCurrentPosisition() async {
-    final hasPermission = await _handlePermisson();
-    Position? positition;
-
-    if (!hasPermission) {
-      return positition;
-    }
-
-    positition = await _geolocatorPlatform.getCurrentPosition();
-    return positition;
-  }
-
-  Future<bool> _handlePermisson() async {
-    bool serviceEnable;
-    LocationPermission permission;
-
-    serviceEnable = await _geolocatorPlatform.isLocationServiceEnabled();
-    if (!serviceEnable) {
-      return false;
-    }
-
-    permission = await _geolocatorPlatform.checkPermission();
-    if (permission == LocationPermission.denied) {
-      return false;
-    }
-
-    if (permission == LocationPermission.deniedForever) {
-      return false;
-    }
-
-    return true;
-  }
-
-  @override
-  void initState() {
-    position = _getCurrentPosisition() as Position;
-    super.initState();
-  }
-
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -162,45 +121,57 @@ class HomeCinemaScreen extends StatefulWidget {
 }
 
 class _HomeCinemaScreenState extends State<HomeCinemaScreen> {
+  final GeolocatorPlatform _geolocatorPlatform = GeolocatorPlatform.instance;
+  late Position position;
+  YoutubePlayerController _ctrVideo = YoutubePlayerController(
+      initialVideoId: "cqGjhVJWtEg",
+      flags: const YoutubePlayerFlags(autoPlay: false, mute: false));
+
+  Future<Position?> _getCurrentPosisition() async {
+    final hasPermission = await _handlePermisson();
+    Position? positition;
+
+    if (!hasPermission) {
+      return positition;
+    }
+
+    positition = await _geolocatorPlatform.getCurrentPosition();
+    return positition;
+  }
+
+  Future<bool> _handlePermisson() async {
+    bool serviceEnable;
+    LocationPermission permission;
+
+    serviceEnable = await _geolocatorPlatform.isLocationServiceEnabled();
+    if (!serviceEnable) {
+      return false;
+    }
+
+    permission = await _geolocatorPlatform.checkPermission();
+    if (permission == LocationPermission.denied) {
+      return false;
+    }
+
+    if (permission == LocationPermission.deniedForever) {
+      return false;
+    }
+
+    return true;
+  }
+
   @override
+  void initState() {
+    position = _getCurrentPosisition() as Position;
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
         child: SingleChildScrollView(
       child: Column(
         children: [
-          // Padding(
-          //   padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
-          //   child: Container(
-          //     decoration: BoxDecoration(
-          //         borderRadius: BorderRadius.circular(5), color: Colors.black),
-          //     child: Center(
-          //       child: Row(
-          //         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          //         children: [
-          //           InkWell(
-          //             onTap: () {},
-          //             child: Row(children: const [
-          //               Icon(
-          //                 Icons.swap_calls,
-          //                 color: Colors.white,
-          //               ),
-          //               Text(
-          //                 "data",
-          //                 style: TextStyle(color: Colors.white),
-          //               )
-          //             ]),
-          //           ),
-          //           InkWell(
-          //             child: const Icon(Icons.notifications_none,
-          //                 color: Colors.white),
-          //             onTap: () {},
-          //           )
-          //         ],
-          //       ),
-          //     ),
-          //   ),
-          // ),
           Padding(
             padding: const EdgeInsets.fromLTRB(30, 10, 30, 0),
             child: Center(
@@ -208,7 +179,7 @@ class _HomeCinemaScreenState extends State<HomeCinemaScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Row(
-                    children: const [Icon(Icons.map_outlined), Text("Jakarta")],
+                    children: const [Icon(Icons.map_outlined), Text("Bandung")],
                   ),
                   IconButton(
                       onPressed: () => {}, icon: const Icon(Icons.search))
@@ -217,11 +188,13 @@ class _HomeCinemaScreenState extends State<HomeCinemaScreen> {
             ),
           ),
           Center(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [Image.asset("assets/image/imgCorrusel.jpeg")],
-            ),
-          ),
+              child: YoutubePlayer(
+            controller: _ctrVideo,
+            showVideoProgressIndicator: true,
+            progressIndicatorColor: Colors.amber,
+            progressColors: ProgressBarColors(
+                playedColor: Colors.amber, handleColor: Colors.amberAccent),
+          )),
           Padding(
             padding: const EdgeInsets.all(15.0),
             child: Row(
