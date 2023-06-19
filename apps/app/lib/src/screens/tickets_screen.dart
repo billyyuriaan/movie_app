@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:app/src/utils/colors.dart';
 import 'package:screenshot/screenshot.dart';
@@ -48,7 +46,7 @@ class _TicketScreenState extends State<TicketScreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset("name"),
+              Image.asset("assets/image/card_avatar.jpeg"),
               const Text(
                 "AVATAR: THE WAY OF WATER",
                 style: TextStyle(),
